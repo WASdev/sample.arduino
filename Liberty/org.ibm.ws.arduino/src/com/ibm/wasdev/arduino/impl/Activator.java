@@ -28,13 +28,16 @@ import org.osgi.service.cm.ManagedServiceFactory;
 
 public class Activator implements BundleActivator, ManagedServiceFactory {
 
-    private ServiceRegistration<?> configRef;
-    private Map<String, String> keyToId = new ConcurrentHashMap<String, String>();
+    private ServiceRegistration configRef;
+    private final Map<String, String> keyToId = new ConcurrentHashMap<String, String>();
 
+    @Override
     public void start(BundleContext context) throws Exception {
-        this.configRef = context.registerService(ManagedServiceFactory.class.getName(), this, getDefaults());
+        this.configRef = context.registerService(
+                ManagedServiceFactory.class.getName(), this, getDefaults());
     }
 
+    @Override
     public void stop(BundleContext context) throws Exception {
         ServiceManager.closeAll();
         configRef.unregister();

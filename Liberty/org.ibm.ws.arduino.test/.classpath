@@ -3,7 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/org.ibm.wasdev.arduino"/>
-	<classpathentry kind="lib" path="C:/Liberty/junit-4.9.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="/org.ibm.wasdev.arduino/BundleContent/libs/jna-4.0.0.jar"/>
 	<classpathentry kind="lib" path="/org.ibm.wasdev.arduino/BundleContent/libs/purejavacomm-0.0.21.jar"/>
 	<classpathentry kind="output" path="bin"/>
